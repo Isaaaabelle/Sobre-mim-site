@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      background-color: #1fa4fd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5d7a8b;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    li {
+      background-color: #fff;
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+
+    <form>
+        <label for = "tarefa">Adicionar tarefa: </label>
+        <input type = "text" id = "tarefa">
+        <button type = "button" onclick = "adicionarTarefa()">Adicionar</button>
+    </form>
+
+    <ul id = "lista-de-tarefas"></ul>
+
+    <script>
+        function adicionarTarefa(){
+            //capturar o campo de texto e criar o elemento <ul> napágina
+                let campoTarefa = document.getElementById("tarefa");
+                let listaDeTarefas = document.getElementById("lista-de-tarefas");
+            //criar um novo item <li> com o texto da tarefa e adicionar à lista
+                let novaTarefa = document.createElement("li");
+                novaTarefa.textContent =  campoTarefa.value;
+                listaDeTarefas.appendChild(novaTarefa);
+            //limpa o campo de texto para que o usuário possa digitar outra tarefa
+
+            campoTarefa.value = "";
+                
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/*Limpar as formatções básicas*/
+*{
+            padding: 0;
+}
+
+#body{
+    height: 100%;
+}
+
+#header{
+    background-color: #466270;
+    padding: 10px;
+    text-align: center;
+}
+
+#topo, #links{
+    font-family:'Times New Roman', Times, serif;
+    padding: 20px;
+    color: #F0A4AB;
+    font-size:large;
+}
+
+
+#header a:link, #header a:visited{
+    color: #F0A4AB;
+    padding: 8px 15px;
+    
+}
+#header a:hover {
+    color: #466270;
+    background: #F0A4AB;
+    text-decoration: none;
+    border-radius: 5%;
+}
+.img{
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px; 
+}
+#main {
+    display: flex;
+    justify-content: center;   
+    gap: 60px;                 
+    width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#texto{
+  width: 600px; 
+  padding: 20px;
+  color: #000000;
+  background-color: #F0A4AB;   
+  border-radius: 8px;     
+  flex: 1;     
+}
+
+#footer {
+      background-color: #466270;
+      color: #F0A4AB;
+      text-align: center;
+      padding: 20px 0px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
